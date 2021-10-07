@@ -32,10 +32,14 @@ const nounsSchema = new Schema({
     memorized: Boolean
 });
 const Noun = model("Noun", nounsSchema);
-
+//login page
 app.get('/', (req, res) => {
     res.send('server running');
 });
+//home page with links to each model
+app.get('/home', (req, res) => {
+    res.render("home.ejs")
+})
 app.get('/nouns/seed', (req, res) => {
     const starterNouns = [
         { english: "teacher", hiragana: "せんせい", kanji: "先生", katakana: "no katakana", memorized: false },
