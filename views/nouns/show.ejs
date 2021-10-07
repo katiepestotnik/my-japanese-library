@@ -5,16 +5,16 @@
     <header>
         <nav>
             <a href="/nouns/<%= noun._id%>/edit">
-                <button>Edit</button>
+                <button>EDIT</button>
             </a>
-            <a href="/nouns/"><button>Nouns List</button></a>
+            <a href="/nouns/"><button>BACK</button></a>
             <form action="/nouns/<%= noun._id%>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete">
             </form>
         </nav>
         <nav>
-            <a href="/home/"><button>Home</button></a>
-            <a href="/user/logout"><button>Logout</button></a>
+            <a href="/home/"><button>HOME</button></a>
+            <a href="/user/logout"><button>LOGOUT</button></a>
         </nav>
     </header>
     <main>

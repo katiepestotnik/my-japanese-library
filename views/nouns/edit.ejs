@@ -2,6 +2,13 @@
 <html lang="en">
 <%- include('../partials/head.ejs')%>
 <body>
+    <nav>
+        <a href="/home/"><button>HOME</button></a>
+        <a href="/nouns/<%= noun._id%>">
+            <button>BACK</button>
+        </a>
+        <a href="/user/logout"><button>LOGOUT</button></a>
+    </nav>
     <main>
         <div>
             <form action="/nouns/<%= noun._id%>?_method=PUT" method="POST">
