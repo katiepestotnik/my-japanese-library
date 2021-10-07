@@ -58,6 +58,13 @@ app.get('/nouns/', (req, res) => {
 app.get('/nouns/new', (req, res) => {
     res.render('nouns/new.ejs');
 });
+//noun destroy
+app.delete('/nouns/:id', (req, res) => {
+    const { id } = req.params;
+    Noun.findByIdAndRemove(id, (err, noun) => {
+        res.redirect('/nouns');
+    });
+});
 //noun update
 app.put('/nouns/:id', (req, res) => {
     const { id } = req.params;
