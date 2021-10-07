@@ -54,6 +54,17 @@ app.get('/nouns/', (req, res) => {
         res.render("nouns/index.ejs", { nouns });
     });
 });
+//noun new
+app.get('/nouns/new', (req, res) => {
+    res.render('nouns/new.ejs');
+});
+//noun create
+app.post('/nouns/', (req, res) => {
+    req.body.memorized = req.body.memorized === "on" ? true : false;
+    Noun.create(req.body, (err, noun) => {
+        res.redirect('/nouns');
+    });
+});
 //noun show
 app.get('/nouns/:id', (req, res) => {
     const { id } = req.params;

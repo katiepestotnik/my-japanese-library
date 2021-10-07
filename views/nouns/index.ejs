@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 <body>
-    <div>
+    <main>
         <% for (noun of nouns){ %>
             <div>
                 <a href="/nouns/<%= noun._id %> ">
@@ -10,8 +10,9 @@
                     <%= noun.english %>
                 </h2>
                 </a>
+                <a href="/nouns/new"><button>ADD NOUN</button></a>
             </div>
         <%}%>
-    </div>
+    </main>
 </body>
 </html>
