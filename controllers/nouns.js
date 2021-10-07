@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 
 //noun index
 router.get('/', (req, res) => {
-    Noun.find({}, (err, nouns) => {
+    Noun.find({username: req.session.username}, (err, nouns) => {
         res.render("nouns/index.ejs", { nouns });
     });
 });
@@ -39,6 +39,7 @@ router.put('/:id', (req, res) => {
 //noun create
 router.post('/', (req, res) => {
     req.body.memorized = req.body.memorized === "on" ? true : false;
+    req.body.username = req.session.username;
     Noun.create(req.body, (err, noun) => {
         res.redirect('/nouns');
     });

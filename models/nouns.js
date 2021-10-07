@@ -6,7 +6,8 @@ const nounsSchema = new Schema({
     hiragana: String,
     kanji: String,
     katakana: String,
-    memorized: Boolean
+    memorized: Boolean,
+    username: String
 });
 const Noun = model("Noun", nounsSchema);
 
