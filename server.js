@@ -58,11 +58,26 @@ app.get('/nouns/', (req, res) => {
 app.get('/nouns/new', (req, res) => {
     res.render('nouns/new.ejs');
 });
+//noun update
+app.put('/nouns/:id', (req, res) => {
+    const { id } = req.params;
+    req.body.memorized = req.body.memorized === "on" ? true : false;
+    Noun.findByIdAndUpdate(id, req.body, { new: true }, (err, noun) => {
+        res.redirect('/nouns');
+    });
+});
 //noun create
 app.post('/nouns/', (req, res) => {
     req.body.memorized = req.body.memorized === "on" ? true : false;
     Noun.create(req.body, (err, noun) => {
         res.redirect('/nouns');
+    });
+});
+//noun edit
+app.get('/nouns/:id/edit', (req, res) => {
+    const { id } = req.params;
+    Noun.findById(id, (err, noun) => {
+        res.render('nouns/edit.ejs', { noun });
     });
 });
 //noun show

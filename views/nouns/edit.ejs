@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')%>
+<body>
+    <main>
+        <div>
+            <form action="/nouns/<%= noun._id%>?_method=PUT" method="POST">
+                <fieldset>
+                    <legend>Update your word!</legend>
+                    <label for="english">English:</label><br>
+                    <input type="text" id="english" name="english" placeholder="English" value="<%=noun.english%>"><br><br>
+                    <label for="hiragana">Hiragana:</label><br>
+                    <input type="text" id="hiragana" name="hiragana" placeholder="Hiragana" value="<%=noun.hiragana%>"><br><br>
+                    <label for="kanji">Kanji:</label><br>
+                    <input type="text" id="kanji" name="kanji" placeholder="Kanji" value="<%=noun.kanji%>"><br><br>
+                    <label for="katakana">Katakana:</label><br>
+                    <input type="text" id="katakana" name="katakana" placeholder="Katakana"value="<%=noun.katakana%>"><br><br>
+                    <label for="memorized">Memorized? <input type="checkbox" name="memorized" <%= noun.memorized ? "checked":""%>/>
+                    </label><br><br>
+                    <input type="submit" value="Update Word">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
