@@ -2,6 +2,15 @@ const express = require('express');
 const Noun = require('../models/nouns');
 const router = express.Router();
 
+//Athorization Middleware
+router.use((req, res, next) => {
+    if (req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect('/');
+    }
+});
+
 //noun index
 router.get('/', (req, res) => {
     Noun.find({}, (err, nouns) => {

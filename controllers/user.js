@@ -24,6 +24,8 @@ router.post('/login', (req, res) => {
         } else {
             const result = bcrypt.compareSync(password, user.password);
             if (result) {
+                req.session.username = username;
+                req.session.loggedIn = true;
                 res.redirect('/home');
             } else {
                 res.send('Password entered is invalid. Try again.');
@@ -31,9 +33,10 @@ router.post('/login', (req, res) => {
         }
     });
 });
-
 router.get('/logout', (req, res) => {
-    res.redirect('/');
+    req.session.destroy((err) => {
+        res.redirect('/');
+    });
 });
 
 module.exports = router;
