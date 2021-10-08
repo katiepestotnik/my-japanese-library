@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs')%>
-<body>
-    <nav>
-        <a href="/user/logout"><button>LOGOUT</button></a>
+<body class="entry">
+    <nav class="hub-nav">
+        <a href="/user/logout"><button class="button">LOGOUT</button></a>
     </nav>
-    <h1>CENTRAL HUB</h1>
-    <section>
+    <h1 class="title-english">CENTRAL HUB</h1>
+    <div>
         <div>ADD TRANSLATION API HERE</div>
-    </section>
-    <h2><a href="/nouns">NOUNS</a></h2>
+    </div>
+    <section class="list-section">
+        <div>
+            <h2 class="sub-header">Access your lists below</h2>
+        </div>
+        <a href="/nouns" class="list-style">NOUNS</a></section>
 </body>
 </html>

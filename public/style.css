@@ -30,6 +30,7 @@ img {
     font-size: 20px;
     padding: 8px;
     margin: 5px;
+    border: 2px solid #fff;
 }
 .button:hover {
     background-color: #002c5b;
@@ -39,6 +40,7 @@ input[type="submit"]{
     background-color: #008be6;
     color: #fff;
     padding: 5px;
+    border: 2px solid #fff;
 }
 input[type="submit"]:hover {
     background-color: #002c5b;
@@ -47,10 +49,38 @@ input[type="submit"]:hover {
 .enter-form {
     margin: 20px;
 }
+.hub-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #008be6;
+}
+.list-section {
+    margin: 10px;
+}
+.list-style {
+    color: #91d3ff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+.list-style:hover {
+    text-decoration: underline;
+}
+.show-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #008be6;
+}
 /* phones */
 @media only screen and (min-width: 576px){
     img {
         width: 536px;
+    }
+    .title-english, .sub-header {
+        font-size: 35px;
+    }
+    .list-style {
+        font-size: 30px;
     }
 }
 /* tablets */
@@ -58,8 +88,11 @@ input[type="submit"]:hover {
     img {
         width: 728px;
     }
-    .title, .title-english {
+    .title, .title-english, .sub-header {
         font-size: 45px;
+    }
+    .list-style {
+        font-size: 40px;
     }
     .button, input[type="submit"], form {
         font-size: 30px;
@@ -70,8 +103,11 @@ input[type="submit"]:hover {
     img {
         width: 952px;
     }
-    .title, .title-english {
+    .title, .title-english, .sub-header {
         font-size: 55px;
+    }
+    .list-style {
+        font-size: 50px;
     }
     .button, input[type="submit"], form {
         font-size: 40px;
@@ -82,10 +118,13 @@ input[type="submit"]:hover {
     img {
         width: 1160px
     }
-    .title, .title-english {
-        font-size: 50px;
+    .title, .title-english, .sub-header {
+        font-size: 60px;
+    }
+    .list-style {
+        font-size: 55px;
     }
     .button, input[type="submit"], form {
-        font-size: 30px;
+        font-size: 50px;
     }
 }
