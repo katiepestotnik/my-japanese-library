@@ -12,7 +12,7 @@
 }
 .title-english {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
 }
 img {
@@ -54,6 +54,10 @@ input[type="submit"]:hover {
     justify-content: flex-end;
     background-color: #008be6;
 }
+.start-nav {
+    display: flex;
+    background-color: #008be6;
+}
 .list-section {
     margin: 10px;
 }
@@ -70,6 +74,10 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: space-between;
     background-color: #008be6;
+}
+li {
+    list-style-type: circle;
+    margin-bottom: 20px;
 }
 /* phones */
 @media only screen and (min-width: 576px){

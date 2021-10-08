@@ -4,19 +4,20 @@
 <body class="entry">
     <header>
         <nav class="hub-nav">
-
+            <div>
             <a href="/nouns/"><button class="button">BACK</button></a>
             <a href="/home/"><button class="button">HOME</button></a>
             <a href="/user/logout"><button class="button">LOGOUT</button></a>
+            </div>
         </nav>
     </header>
     <main class="list-section">
-        <h1><%= noun.english %></h1>
-        <ul>
-           <li>Hiragana: <%= noun.hiragana %></li><br>
-           <li>Kanji: <%= noun.kanji %></li><br>
-           <li>Katakana: <%= noun.katakana %></li><br>
-           <li>Is this memorized? <%= noun.memorized ? "はい":"いいえ"%></li> 
+        <h1 class="title-english"><%= noun.english %></h1>
+        <ul class="sub-header enter-form">
+           <li>Hiragana: <br><br><%= noun.hiragana %></li>
+           <li>Kanji: <br><br><%= noun.kanji %></li>
+           <li>Katakana: <br><br><%= noun.katakana %></li>
+           <li>Is this memorized? <br><br><%= noun.memorized ? "はい":"いいえ"%></li> 
         </ul>
         <a href="/nouns/<%= noun._id%>/edit">
             <button class="button">EDIT</button>
