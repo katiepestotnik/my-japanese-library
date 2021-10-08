@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
-<body>
+<body class='entry-auth'>
+    <h1 class="title-english">Create an account to start adding to your Japanese Library!</h1>
+    <main class="enter-form">
     <form action="/user/signup" method="POST">
         <fieldset>
             <legend>SIGNUP</legend>
             <label for="username">
                 Username: <input type="text" id="username" name="username"required>
-            </label>
+            </label><br><br>
             <label for="password">
                 Password: <input type="text" id="password" name="password" required>
-            </label>
+            </label><br><br>
             <input type="submit" value="Create Account">
         </fieldset>
     </form>
+</main>
+<img src="https://audiologyblog.phonakpro.com/wp-content/uploads/2017/03/E-learning.jpg" alt="Computer-Book Image"> 
 </body>
 </html>

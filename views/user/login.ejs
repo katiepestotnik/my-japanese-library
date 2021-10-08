@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs')%>
-<body>
+<body class="entry-auth">
+    <h1 class="title-english">Login and start adding to your library!</h1>
+    <main class="enter-form">
    <form action="/user/login" method="POST">
         <fieldset>
             <legend>LOGIN</legend>
             <label for="username">
             Username: <input type="text" name="username" id="username"required>
-            </label>
+            </label><br><br>
             <label for="password">
             Password: <input type="text" name="password" id="password"required>
-            </label>
+            </label><br><br>
             <input type="submit" value="LOGIN"/>
         </fieldset>
-    </form> 
+    </form>
+    </main>
+    <img src="https://audiologyblog.phonakpro.com/wp-content/uploads/2017/03/E-learning.jpg" alt="Computer-Book Image"> 
 </body>
 </html>
