@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Yomogi&display=swap');
+
+.entry {
+    background-color: #002c5b;
+}
+.title {
+    text-align: center;
+    color: #fff;
+    font-family: 'Yomogi', cursive;
+}
+.fuji-img {
+    width: 414px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+.entry-buttons {
+    text-align: center;
+}
+.signup, .login {
+    color: #fff;
+    background-color: #008be6;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px;
+}
+.signup:hover, .login:hover {
+    background-color: #002c5b;
+    cursor: pointer;
+}
+/* phones */
+@media only screen and (min-width: 576px){
+    .fuji-img {
+        width: 576px;
+    }
+}
+/* tablets */
+@media only screen and (min-width: 768px){
+    .fuji-img {
+        width: 768px;
+    }
+    .title {
+        font-size: 45px;
+    }
+    .signup, .login {
+        font-size: 30px;
+    }
+}
+/* laptops    */
+@media only screen and (min-width: 992px) {
+    .fuji-img {
+        width: 992px;
+    }
+    .title {
+        font-size: 55px;
+    }
+    .signup, .login {
+        font-size: 40px;
+    }
+}
+/* large screen */
+@media only screen and (min-width: 1200px) {
+    .fuji-img {
+        width: 1200px;
+    }
+    .title {
+        font-size: 70px;
+    }
+    .signup, .login {
+        font-size: 50px;
+    }
+}
