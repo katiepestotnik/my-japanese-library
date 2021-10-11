@@ -22,6 +22,10 @@
     font-weight: 900;
     font-size: 45px
 }
+.text {
+    font-size: 20px;
+    margin: 5px;
+}
 img {
     width: 414px;
     height: auto;
@@ -57,9 +61,10 @@ input[type="checkbox"]{
     height: 20px;
     width: 20px;
 }
-.enter-form {
+.enter-form, .translate-form {
     margin: 20px;
 }
+
 .hub-nav {
     display: flex;
     justify-content: space-between;
@@ -77,12 +82,13 @@ input[type="checkbox"]{
 .container {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 .list-section {
     margin: 10px;
 }
 .list-style {
-    color: #91d3ff;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
     font-size: 25px;
@@ -101,6 +107,13 @@ li {
 }
 .user-edit {
     background-color: #008be6;
+}
+.container-index {
+    font-size: 10px;
+    margin-left: 10px;
+}
+.sub-header {
+    font-size: 20px;
 }
 /* phones */
 @media only screen and (min-width: 576px){
@@ -125,6 +138,9 @@ li {
     .list-style {
         font-size: 40px;
     }
+    .text{
+        font-size: 35px;
+    }
     .button, input[type="submit"], form {
         font-size: 30px;
     }
@@ -143,6 +159,9 @@ li {
     }
     .list-style {
         font-size: 50px;
+    }
+    .text{
+        font-size: 35px;
     }
     .button, input[type="submit"], form {
         font-size: 40px;
@@ -169,5 +188,8 @@ li {
     input[type="checkbox"]{
         height: 35px;
         width: 35px;
+    }
+    .text{
+        font-size: 40px;
     }
 }

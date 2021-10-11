@@ -8,11 +8,11 @@
     </nav>
     <main>
         <% for (noun of nouns){ %>
-            <div>
+            <div class="container-index">
                 <a href="/nouns/<%= noun._id %> " class="list-style">
-                <h2 class="sub-header">
+                <li class="sub-header">
                     <%= noun.english %>
-                </h2>
+                </li>
                 </a>
             </div>
         <%}%>

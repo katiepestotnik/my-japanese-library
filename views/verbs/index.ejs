@@ -8,11 +8,11 @@
     </nav>
     <main>
         <% for (verb of verbs){ %>
-            <div>
+            <div class="container-index">
                 <a href="/verbs/<%= verb._id %> " class="list-style">
-                <h2 class="sub-header">
+                <li class="sub-header">
                     <%= verb.english %>
-                </h2>
+                </li>
                 </a>
             </div>
         <%}%>
