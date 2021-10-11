@@ -15,6 +15,13 @@
     font-size: 25px;
     padding: 10px;
 }
+#translation {
+    font-family: 'Yomogi', cursive;
+    height: 50px;
+    margin: 8px;
+    font-weight: 900;
+    font-size: 45px
+}
 img {
     width: 414px;
     height: auto;

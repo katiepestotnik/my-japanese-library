@@ -9,6 +9,7 @@ const translateFunction = (event) => {
     }).then((data) => {
         console.log(data.translations[0].text);
         $translation.text(`${data.translations[0].text}`);
+        $translation.show();
     },
         (error) => {
             console.log(`AJAX problem`);
