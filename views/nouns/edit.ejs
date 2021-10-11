@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs')%>
-<body>
-    <nav>
-        <a href="/home/"><button>HOME</button></a>
-        <a href="/nouns/<%= noun._id%>">
-            <button>BACK</button>
-        </a>
-        <a href="/user/logout"><button>LOGOUT</button></a>
-    </nav>
+<body class="user-edit">
+    <div class="hub-nav">
+        <div>
+            <a href="/home/"><button class="button">HOME</button></a>
+        </div>
+        <div>
+            <a href="/nouns/<%= noun._id%>">
+                <button class="button">BACK</button>
+            </a>
+            <a href="/user/logout"><button class="button">LOGOUT</button></a>
+        </div>
+    </div>
     <main>
         <div>
-            <form action="/nouns/<%= noun._id%>?_method=PUT" method="POST">
+            <form action="/nouns/<%= noun._id%>?_method=PUT" method="POST" class="entry">
                 <fieldset>
                     <legend>Update your word!</legend>
                     <label for="english">English:</label><br>

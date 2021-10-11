@@ -46,13 +46,22 @@ input[type="submit"]:hover {
     background-color: #002c5b;
     cursor: pointer;
 }
+input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+}
 .enter-form {
     margin: 20px;
 }
 .hub-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: #008be6;
+}
+.home-nav {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #008be6;
 }
 .start-nav {
     display: flex;
@@ -78,6 +87,9 @@ input[type="submit"]:hover {
 li {
     list-style-type: circle;
     margin-bottom: 20px;
+}
+.user-edit {
+    background-color: #008be6;
 }
 /* phones */
 @media only screen and (min-width: 576px){
@@ -105,6 +117,10 @@ li {
     .button, input[type="submit"], form {
         font-size: 30px;
     }
+    input[type="checkbox"]{
+        height: 25px;
+        width: 25px;
+    }
 }
 /* laptops    */
 @media only screen and (min-width: 992px) {
@@ -120,6 +136,10 @@ li {
     .button, input[type="submit"], form {
         font-size: 40px;
     }
+    input[type="checkbox"]{
+        height: 30px;
+        width: 30px;
+    }
 }
 /* large screen */
 @media only screen and (min-width: 1200px) {
@@ -134,5 +154,9 @@ li {
     }
     .button, input[type="submit"], form {
         font-size: 50px;
+    }
+    input[type="checkbox"]{
+        height: 35px;
+        width: 35px;
     }
 }

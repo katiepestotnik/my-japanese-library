@@ -3,13 +3,15 @@
 <%- include('../partials/head.ejs') %>
 <body class="entry">
     <header>
-        <nav class="hub-nav">
+        <div class="hub-nav">
+            <div>
+                <a href="/home/"><button class="button">HOME</button></a>
+            </div>
             <div>
             <a href="/nouns/"><button class="button">BACK</button></a>
-            <a href="/home/"><button class="button">HOME</button></a>
             <a href="/user/logout"><button class="button">LOGOUT</button></a>
             </div>
-        </nav>
+        </div>
     </header>
     <main class="list-section">
         <h1 class="title-english"><%= noun.english %></h1>
