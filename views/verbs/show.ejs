@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body class="entry">
+    <header>
+        <div class="hub-nav">
+            <div>
+                <a href="/home/"><button class="button">HOME</button></a>
+            </div>
+            <div>
+            <a href="/verbs/"><button class="button">BACK</button></a>
+            <a href="/user/logout"><button class="button">LOGOUT</button></a>
+            </div>
+        </div>
+    </header>
+    <main class="list-section">
+        <h1 class="title-english"><%= verb.english %></h1>
+        <ul class="sub-header enter-form">
+           <li>Hiragana: <br><br><%= verb.hiragana %></li>
+           <li>Kanji: <br><br><%= verb.kanji %></li>
+           <li>Katakana: <br><br><%= verb.katakana %></li>
+           <li>Is this memorized? <br><br><%= verb.memorized ? "はい":"いいえ"%></li> 
+        </ul>
+        <a href="/verbs/<%= verb._id%>/edit">
+            <button class="button">EDIT</button>
+        </a>
+        <form action="/verbs/<%= verb._id%>?_method=DELETE" method="POST">
+            <input class="button" type="submit" value="DELETE">
+        </form>
+    </main>
+</body>
+</html>

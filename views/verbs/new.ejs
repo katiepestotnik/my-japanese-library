@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')%>
+<body class="user-edit">
+    <div class="hub-nav">
+        <div>
+            <a href="/home/"><button class="button">HOME</button></a>
+        </div>
+        <div>
+        <a href="/verbs/"><button class="button">BACK</button></a>
+        <a href="/user/logout"><button class="button">LOGOUT</button></a>
+        </div>
+    </div>
+    <main>
+        <div>
+            <form action="/verbs" method="POST" class="entry">
+                <fieldset>
+                    <legend>Add a new word to your library!</legend>
+                    <label for="english">English:</label><br>
+                    <input type="text" id="english" name="english" placeholder="English Word"><br><br>
+                    <label for="hiragana">Hiragana:</label><br>
+                    <input type="text" id="hiragana" name="hiragana" placeholder="Hiragana"><br><br>
+                    <label for="kanji">Kanji:</label><br>
+                    <input type="text" id="kanji" name="kanji" placeholder="Kanji"><br><br>
+                    <label for="katakana">Katakana:</label><br>
+                    <input type="text" id="katakana" name="katakana" placeholder="Katakana"><br><br>
+                    <label for="memorized">Memorized? <input type="checkbox" name="memorized"></label><br><br>
+                    <input type="submit" value="ADD WORD">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

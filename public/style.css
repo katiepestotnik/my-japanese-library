@@ -67,6 +67,10 @@ input[type="checkbox"]{
     display: flex;
     background-color: #008be6;
 }
+.container {
+    display: flex;
+    justify-content: space-around;
+}
 .list-section {
     margin: 10px;
 }

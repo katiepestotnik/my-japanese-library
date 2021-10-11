@@ -7,7 +7,8 @@ const methodOverride = require('method-override');
 const PORT = process.env.PORT;
 const NounRouter = require('./controllers/nouns');
 const UserRouter = require('./controllers/user');
-const HomeRouter = require('./controllers/home')
+const HomeRouter = require('./controllers/home');
+const VerbRouter = require('./controllers/verbs')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
@@ -25,6 +26,7 @@ app.use(session({
 app.use('/nouns', NounRouter);
 app.use('/user', UserRouter);
 app.use('/home', HomeRouter);
+app.use('/verbs', VerbRouter);
 
 //login page
 app.get('/', (req, res) => {

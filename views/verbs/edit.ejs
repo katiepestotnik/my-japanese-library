@@ -7,7 +7,7 @@
             <a href="/home/"><button class="button">HOME</button></a>
         </div>
         <div>
-            <a href="/nouns/<%= noun._id%>">
+            <a href="/verbs/<%= verb._id%>">
                 <button class="button">BACK</button>
             </a>
             <a href="/user/logout"><button class="button">LOGOUT</button></a>
@@ -15,18 +15,18 @@
     </div>
     <main>
         <div>
-            <form action="/nouns/<%= noun._id%>?_method=PUT" method="POST" class="entry">
+            <form action="/verbs/<%= verb._id%>?_method=PUT" method="POST" class="entry">
                 <fieldset>
                     <legend>Update your word!</legend>
                     <label for="english">English:</label><br>
-                    <input type="text" id="english" name="english" placeholder="English" value="<%=noun.english%>"><br><br>
+                    <input type="text" id="english" name="english" placeholder="English" value="<%=verb.english%>"><br><br>
                     <label for="hiragana">Hiragana:</label><br>
-                    <input type="text" id="hiragana" name="hiragana" placeholder="Hiragana" value="<%=noun.hiragana%>"><br><br>
+                    <input type="text" id="hiragana" name="hiragana" placeholder="Hiragana" value="<%=verb.hiragana%>"><br><br>
                     <label for="kanji">Kanji:</label><br>
-                    <input type="text" id="kanji" name="kanji" placeholder="Kanji" value="<%=noun.kanji%>"><br><br>
+                    <input type="text" id="kanji" name="kanji" placeholder="Kanji" value="<%=verb.kanji%>"><br><br>
                     <label for="katakana">Katakana:</label><br>
-                    <input type="text" id="katakana" name="katakana" placeholder="Katakana"value="<%=noun.katakana%>"><br><br>
-                    <label for="memorized">Memorized? <input type="checkbox" name="memorized" <%= noun.memorized ? "checked":""%>/>
+                    <input type="text" id="katakana" name="katakana" placeholder="Katakana"value="<%=verb.katakana%>"><br><br>
+                    <label for="memorized">Memorized? <input type="checkbox" name="memorized" <%= verb.memorized ? "checked":""%>/>
                     </label><br><br>
                     <input type="submit" value="UPDATE">
                 </fieldset>
