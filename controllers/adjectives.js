@@ -21,5 +21,34 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
     res.render('adjectives/new.ejs');
 });
-
+//adjective destroy
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+    Adjective.findByIdAndRemove(id, (err, adjective) => {
+        res.redirect('/adjectives');
+    });
+});
+//adjective update
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    req.body.memorized = req.body.memorized === "on" ? true : false;
+    Adjective.findByIdAndUpdate(id, req.body, { new: true }, (err, adjective) => {
+        res.redirect('/adjectives');
+    });
+});
+//adjective create
+router.post('/', (req, res) => {
+    req.body.memorized = req.body.memorized === "on" ? true : false;
+    req.body.username = req.session.username;
+    Adjective.create(req.body, (err, adjective) => {
+        res.redirect('/adjectives');
+    });
+});
+//adjective show
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    Adjective.findById(id, (err, adjective) => {
+        res.render('adjectives/show.ejs', { adjective });
+    });
+});
 module.exports = router;
