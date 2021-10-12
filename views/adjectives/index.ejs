@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body class="entry">
+    <nav class="show-nav">
+        <a href="/home/"><button class="button">HOME</button></a>
+        <a href="/user/logout"><button class="button">LOGOUT</button></a>
+    </nav>
+    <main>
+        <% for(adjective of adjectives) { %>
+            <div class="container-index">
+                <a href="/adjectives/<%=adjective._id%>" class="list-style">
+                    <li class="sub-header">
+                        <%= adjective.english %>
+                    </li>
+                </a>
+            </div>
+       <% } %>
+    </main>
+    <a href="/adjectives/new"><button class="button">ADD ADJECTIVE</button></a>
+</body>
+</html>

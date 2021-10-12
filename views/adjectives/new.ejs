@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head.ejs')%>
+<%- include('../partials/head.ejs') %>
 <body class="user-edit">
     <div class="hub-nav">
         <div>
-            <a href="/home/"><button class="button">HOME</button></a>
+            <a href="/home"><button class="button">HOME</button></a>
         </div>
         <div>
-            <a href="/nouns/"><button class="button">BACK</button></a>
+            <a href="/adjectives"><button class="button">BACK</button></a>
             <a href="/user/logout"><button class="button">LOGOUT</button></a>
         </div>
     </div>
     <main>
         <div>
-            <form action="/nouns" method="POST" class="entry">
+            <form action="/adjectives" method="POST" class="entry">
                 <fieldset>
-                    <legend>Add a new word to your library!</legend>
+                    <legend>Add a new word to your Library!</legend>
                     <label for="english">English:</label><br>
                     <input type="text" id="english" name="english" placeholder="English Word"><br><br>
                     <label for="hiragana">Hiragana:</label><br>
@@ -24,7 +24,9 @@
                     <input type="text" id="kanji" name="kanji" placeholder="Kanji"><br><br>
                     <label for="katakana">Katakana:</label><br>
                     <input type="text" id="katakana" name="katakana" placeholder="Katakana"><br><br>
-                    <label for="memorized">Memorized? <input type="checkbox" name="memorized" id="memorized"></label><br><br>
+                    <label for="memorized">Memorized?
+                    <input type="checkbox" id="memorized" name="memorized">
+                    </label><br><br>
                     <input type="submit" value="Add Word">
                 </fieldset>
             </form>
