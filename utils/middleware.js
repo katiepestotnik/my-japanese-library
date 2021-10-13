@@ -26,6 +26,5 @@ const middleware = (app) => {
     app.use('/home', HomeRouter);
     app.use('/verbs', VerbRouter);
     app.use('/adjectives', AdjectiveRouter);
-}
-
-module.exports = middleware
+};
+module.exports = middleware;
