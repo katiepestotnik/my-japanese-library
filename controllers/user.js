@@ -12,7 +12,6 @@ router.post('/signup', async (req, res) => {
         res.redirect('/user/login');
     })
 });
-
 router.get('/login', (req, res) => {
     res.render('user/login.ejs');
 });
@@ -38,5 +37,4 @@ router.get('/logout', (req, res) => {
         res.redirect('/');
     });
 });
-
 module.exports = router;

@@ -1,6 +1,5 @@
 const mongoose = require('./connection');
 const Noun = require('./nouns');
-
 mongoose.connection.on('open', () => {
     const starterNouns = [
         { english: "teacher", hiragana: "せんせい", kanji: "先生", katakana: "no katakana", memorized: false },

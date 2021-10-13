@@ -1,7 +1,6 @@
 const express = require('express');
 const Verb = require('../models/verbs');
 const router = express.Router();
-
 //Athorization Middleware
 router.use((req, res, next) => {
     if (req.session.loggedIn) {
@@ -10,7 +9,6 @@ router.use((req, res, next) => {
         res.redirect('/');
     }
 });
-
 //verb index
 router.get('/', (req, res) => {
     Verb.find({username: req.session.username}, (err, verbs) => {
@@ -58,5 +56,4 @@ router.get('/:id', (req, res) => {
         res.render('verbs/show.ejs', { verb });
     });
 });
-
 module.exports = router;

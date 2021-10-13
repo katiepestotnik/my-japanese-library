@@ -1,4 +1,4 @@
-//entered text
+// require('dotenv').config();
 const $input = $('#userInput');
 const $show = $('#show-input');
 //submit id
@@ -12,11 +12,9 @@ const translateFunction = (event) => {
         $show.text(`${$input.val()}`)
         $translation.show();
         $show.show();
-    
     },
         (error) => {
             console.log(`AJAX problem`);
         });
 };
-
 $('.translate-form').on('submit', translateFunction);

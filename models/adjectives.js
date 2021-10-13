@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const { Schema, model } = mongoose;
 const adjectivesSchema = new Schema({
     english: String,
@@ -10,5 +9,4 @@ const adjectivesSchema = new Schema({
     username: String
 });
 const Adjective = model("Adjective", adjectivesSchema);
-
 module.exports = Adjective;

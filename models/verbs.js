@@ -1,5 +1,4 @@
 const mongoose = require('./connection');
-
 const { Schema, model } = mongoose;
 const verbsSchema = new Schema({
     english: String,
@@ -10,5 +9,4 @@ const verbsSchema = new Schema({
     username: String
 });
 const Verb = model("Verb", verbsSchema);
-
 module.exports = Verb;

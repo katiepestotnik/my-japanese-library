@@ -10,7 +10,6 @@ router.use((req, res, next) => {
         res.redirect('/');
     }
 });
-
 //noun index
 router.get('/', (req, res) => {
     Noun.find({username: req.session.username}, (err, nouns) => {
@@ -58,5 +57,4 @@ router.get('/:id', (req, res) => {
         res.render('nouns/show.ejs', { noun });
     });
 });
-
 module.exports = router;
