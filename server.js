@@ -12,7 +12,6 @@ const VerbRouter = require('./controllers/verbs');
 const AdjectiveRouter = require('./controllers/adjectives');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-
 //Middleware
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true }));
@@ -29,16 +28,10 @@ app.use('/user', UserRouter);
 app.use('/home', HomeRouter);
 app.use('/verbs', VerbRouter);
 app.use('/adjectives', AdjectiveRouter);
-
 //login page
 app.get('/', (req, res) => {
     res.render('index.ejs');
 });
-//home page with links to each model
-// app.get('/home', (req, res) => {
-//     res.render("home.ejs");
-// });
-
 app.listen((PORT), () => {
-    console.log(`Listening on ${PORT}`)
+    console.log(`Listening on ${PORT}`);
 });

@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Yomogi&display=swap');
-
 .entry, .entry-auth {
     background-color: #002c5b;
     font-family: 'Quicksand', sans-serif;
     color: #fff;
 }
-
 .title {
     text-align: center;
     font-family: 'Yomogi', cursive;
@@ -22,12 +20,19 @@
     font-weight: 900;
     font-size: 45px
 }
+#show-input {
+    font-family: 'Quicksand', sans-serif;
+    height: 50px;
+    margin: 8px;
+    font-weight: 900;
+    font-size: 45px
+}
 .text {
     font-size: 20px;
     margin: 5px;
 }
 img {
-    width: 414px;
+    width: 370px;
     height: auto;
     margin: 20px auto;
     display: block;
@@ -52,6 +57,7 @@ input[type="submit"]{
     color: #fff;
     padding: 5px;
     border: 2px solid #fff;
+    margin-top: 5px;
 }
 input[type="submit"]:hover {
     background-color: #002c5b;
@@ -69,6 +75,7 @@ input[type="checkbox"]{
     display: flex;
     justify-content: space-between;
     background-color: #008be6;
+    font-family: 'Quicksand', sans-serif;
 }
 .home-nav {
         display: flex;
@@ -118,28 +125,56 @@ li {
 /* phones */
 @media only screen and (min-width: 576px){
     img {
-        width: 536px;
+        width: 400px;
+        height: auto;
     }
-    .title-english, .sub-header {
-        font-size: 35px;
+    .title-english, .sub-header, .title-english {
+        font-size: 25px;
     }
     .list-style {
         font-size: 30px;
+    }
+    .entry {
+        font-size: 20px;
     }
 }
 /* tablets */
 @media only screen and (min-width: 768px){
     img {
-        width: 728px;
+        width: 500px;
+        height: auto;
     }
     .title, .title-english, .sub-header {
-        font-size: 45px;
+        font-size: 30px;
     }
     .list-style {
-        font-size: 40px;
+        font-size: 30px;
     }
     .text{
+        font-size: 25px;
+    }
+    .button, input[type="submit"], form {
+        font-size: 25px;
+    }
+    input[type="checkbox"]{
+        height: 20px;
+        width: 20px;
+    }
+}
+/* laptops    */
+@media only screen and (min-width: 992px) {
+    img {
+        width: 600px;
+        height: auto;
+    }
+    .title, .title-english, .sub-header {
         font-size: 35px;
+    }
+    .list-style {
+        font-size: 35px;
+    }
+    .text{
+        font-size: 30px;
     }
     .button, input[type="submit"], form {
         font-size: 30px;
@@ -149,47 +184,26 @@ li {
         width: 25px;
     }
 }
-/* laptops    */
-@media only screen and (min-width: 992px) {
+/* large screen */
+@media only screen and (min-width: 1200px) {
     img {
-        width: 952px;
+        width: 800px;
+        height: auto;
     }
     .title, .title-english, .sub-header {
-        font-size: 55px;
-    }
-    .list-style {
-        font-size: 50px;
-    }
-    .text{
         font-size: 35px;
     }
+    .list-style {
+        font-size: 30px;
+    }
     .button, input[type="submit"], form {
-        font-size: 40px;
+        font-size: 35px;
     }
     input[type="checkbox"]{
         height: 30px;
         width: 30px;
     }
-}
-/* large screen */
-@media only screen and (min-width: 1200px) {
-    img {
-        width: 1160px
-    }
-    .title, .title-english, .sub-header {
-        font-size: 60px;
-    }
-    .list-style {
-        font-size: 55px;
-    }
-    .button, input[type="submit"], form {
-        font-size: 50px;
-    }
-    input[type="checkbox"]{
-        height: 35px;
-        width: 35px;
-    }
     .text{
-        font-size: 40px;
+        font-size: 35px;
     }
 }
