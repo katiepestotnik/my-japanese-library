@@ -2,7 +2,17 @@
 
 ### Link to live site: [日本後の図書館](https://my-japanese-library.herokuapp.com/)
 
+<img src="screenshot.png" alt="app-example">
 
+- Technologies:
+    - Javascript
+    - MongoDB with Mongoose
+    - Express - Node.js
+    - EJS
+    - AJAX with DeepL Translation
+    - jQuery
+    - CSS
+    - HTML
 
 Application that allows a user to signup and login to create their own Japanese word library.<br>
 Currently, user has full CRUD functionality for nouns, verbs, and adjectives.<br><br>
