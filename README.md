@@ -19,6 +19,6 @@ Currently, user has full CRUD functionality for nouns, verbs, and adjectives.<br
 User can use a translation API call on the central hub page.<br>
     - Free API not great with exact translations. Translates a lot of words into katakana while there should be a hiragana or kanji version.<br><br>
 Future Enhancements<br>
-    - Favicon
-    - Show page will have a special symbol displayed if word is marked as memorized.
-    - Have the word read aloud from computer speaker as soon as show page loads.
+    - Favicon<br>
+    - Show page will have a special symbol displayed if word is marked as memorized.<br>
+    - Have the word read aloud from computer speaker as soon as show page loads.<br>
