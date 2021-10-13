@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs')%>
+<body class="user-edit">
+    <div class="hub-nav">
+        <div>
+            <a href="/home"><button class="button">HOME</button></a>
+        </div>
+        <div>
+            <a href="/adjectives/<%= adjective._id%>"><button class="button"></button>BACK</a>
+            <a href="/user/logout/"><button class="button">LOGOUT</button></a>
+        </div>
+    </div>
+    <main>
+        <div>
+            <form action="/adjectives/<%=adjective._id%>?_method=PUT" method="POST" class="entry">
+                <fieldset>
+                    <legend>Update your word!</legend>
+                    <label for="english">English:</label><br>
+                    <input type="text" id="english" name="english" placeholder="English" value="<%=adjective.english%>"><br><br>
+                    <label for="hiragana">Hiragana:</label><br>
+                    <input type="text" id="hiragana" name="hiragana" placeholder="Hiragana" value="<%=adjective.hiragana%>"><br><br>
+                    <label for="kanji">Kanji:</label><br>
+                    <input type="text" id="kanji" name="kanji" placeholder="Kanji" value="<%=adjective.kanji%>"><br><br>
+                    <label for="katakana">Katakana:</label><br>
+                    <input type="text" id="katakana" name="katakana" placeholder="Katakana"value="<%=adjective.katakana%>"><br><br>
+                    <label for="memorized">Memorized? <input type="checkbox" name="memorized" <%= adjective.memorized ? "checked":""%>/>
+                    </label><br><br>
+                    <input type="submit" value="UPDATE">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

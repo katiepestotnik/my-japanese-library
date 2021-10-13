@@ -44,6 +44,13 @@ router.post('/', (req, res) => {
         res.redirect('/adjectives');
     });
 });
+//adjective edit
+router.get('/:id/edit', (req, res) => {
+    const { id } = req.params;
+    Adjective.findById(id, (err, adjective) => {
+        res.render('adjectives/edit.ejs', { adjective });
+    });
+});
 //adjective show
 router.get('/:id', (req, res) => {
     const { id } = req.params;
