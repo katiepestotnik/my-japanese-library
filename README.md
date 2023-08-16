@@ -1,6 +1,6 @@
 # My Japanese Library
 
-### Link to live site: [日本後の図書館](https://my-japanese-library.herokuapp.com/)
+### Link to live site: [日本後の図書館](https://my-japanese-library-8622f44bc0ba.herokuapp.com/)
 
 <img src="screenshot.png" alt="app-example">
 
